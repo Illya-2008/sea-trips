@@ -1,0 +1,129 @@
+include components/mixins
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;700&family=PT+Sans&display=swap" rel="stylesheet">
+        link(rel="stylesheet", href="css/style.css")
+        title Sea trips
+    body
+        header 
+            .wrapper
+                .header-top
+                    a(href="#")
+                        img(src="../img/logo.png", alt="logo")
+                    ul.top-menu
+                        li 
+                            a(href="#").header-a ГОЛОВНА
+                        li 
+                            a(href="#").header-a ПОСЛУГИ
+                        li 
+                            a(href="#").header-a ПРО КОМПАНІЮ
+                        li 
+                            a(href="#").header-a АКЦІЇ
+                        li 
+                            a(href="#").header-a ПАРАМЕТРИ
+                        li 
+                            a(href="#").header-a ВІДГУКИ
+                        li 
+                            a(href="#").header-a КОНТРАКТИ
+                .header-middle
+                    h1.header-h1 МОРСЬКІ ПРИГОДИ
+                    p.header-text Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                    a(href="#").button ДЕТАЛЬНІШЕ
+                .header-bottom
+                    h2.h2 ОБЕРИ СВІЙ ПЛАН ПОДОРОЖІ
+                    p.text2 Наша фірма - лідер на ринку у своїй сфері
+                    a(href="#island")
+                        img(src="../img/arrow-down.png", alt="arrow").arrow-down
+        main
+            .wrapper
+                .main-top
+                    .row
+                        .info-left.col-3
+                            h2.main-h2.h2 ПРО НАШУ КОМПАНІЮ
+                            p.text3 Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                            a(href="#").button ДОКЛАДНІШЕ
+                            p.text4 * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                        .cards.col-9
+                            .row
+                                +cards(cards.card1)
+                                +cards(cards.card2)
+                                +cards(cards.card3)
+                            a(href="#").all-plans ДИВИТИСЬ УСІ ПЛАНИ    
+                .line
+                .island#island
+                    .island-left
+                        img(src="../img/island.png", alt="island").island-img
+                    .island-right
+                        h2.h2.island-h2 ДИВОВИЖНИЙ БЕЗЛЮДНИЙ ОСТРІВ, ЯКИЙ ЗВОДИТЬ ЛЮДЕЙ З РОЗУМУ
+                        p.text2.island-text Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                        .price-block
+                            p.price 575 грн./день
+                            p.price-info В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.  
+                        .buttons
+                            a(href="#").order ЗАМОВИТИ ТУР
+                            a(href="#").more-detals ДЕТАЛЬНІШЕ
+            .middle-background 
+                .wrapper
+                    .main-middle 
+                        .description
+                            h1.middle-first-h1 СПІЙМАЙ ХВИЛЮ
+                            h1.middle-second-h1 ЖИВИ ЯСКРАВО!
+                            p.middle-text1 Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
+                            a(href="#").button ДЕТАЛЬНІШЕ
+                        .reviews  
+                            img(src="../img/quotes.png", alt="quotes").quotes
+                            p.middle-text2.text2 Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи.
+                            .client 
+                                p.name Олег Набережний
+                                p клієнт
+                                img(src="../img/man.png", alt="man").man
+            .main-bottom 
+                h2.h2.bottom-h2 СПЕЦІАЛЬНІ ПРОПОЗИЦІЇ ТИЖНЯ
+                p.text2.bottom-text Гарячі праозиції, по-швидше обирай і поїхали! 
+                .wrapper 
+                    .bottom-cards 
+                        .row 
+                            +bottom_cards(bottom_cards.card1)
+                            +bottom_cards(bottom_cards.card2)
+                            +bottom_cards(bottom_cards.card3)
+                            +bottom_cards(bottom_cards.card4)
+                    .line 
+        footer
+            .wrapper 
+                .footer 
+                    h2.footer-h2 ДОДАТКОВА ІНФОРМАЦІЯ
+                    figure.footer-card1
+                        figcaption 
+                            img(src="../img/file.png", alt="footer-img1").file
+                            h6.h61 Графік роботи готелів.xls
+                            p.size Розмір файла: 10Mb
+                            p.footer-info1 Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.
+                            a(href="#").download СКАЧАТИ
+                    figure.footer-card2
+                        figcaption 
+                            img(src="../img/file.png", alt="footer-img1").file
+                            h6.h61 Інформація про харчування.xls
+                            p.size Розмір файла: 10Mb
+                            p.footer-info2 У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.
+                            a(href="#").download СКАЧАТИ
+                    .bottom-reviews 
+                        h6.h62 задати питання
+                        p.footer-text Скажіть доброго дня нашому консультанту,і ми з радістю відповімо на Ваші запитання
+                        p.phone-number +38 (050) 56 98 511
+                        p.footer-name Анна Миколаївна
+                        p.text4 консультант
+                        img(src="../img/woman.png", alt="woman").man
+            .bottom-footer
+            .last-block
+                p.last-text © 2016 Cars.com All rights reserved.
+        script(src="js/scripts.js")
