@@ -30,6 +30,7 @@
     let bottom_cards = {
         card1: {
             cardimg: true,
+            bicycle: false,
             src: "../img/bottom-img1.png",
             alt: "img1",
             h3: "Романтична подорож на 2",
@@ -39,6 +40,7 @@
         },
         card2: {
             cardimg: true,
+            bicycle: true,
             src: "../img/bottom-img2.png",
             alt: "img2",
             h3: "Велотур",
@@ -48,6 +50,7 @@
         },
         card3: {
             cardimg: true,
+            bicycle: false,
             src: "../img/bottom-img3.png",
             alt: "img3",
             h3: "На острови!",
@@ -57,6 +60,7 @@
         },
         card4: {
             cardimg: true,
+            bicycle: false,
             src: "../img/bottom-img4.png",
             alt: "img4",
             h3: "Катання на сьорфінгу",
@@ -86,7 +90,12 @@ mixin bottom_cards (item)
             a(href="#").card-a
                 if (item.cardimg)
                     .images.bottom-card-img
-                        img(src=item.src, alt=item.alt)
+                        if (item.bicycle)
+                            .images.bottom-card-img.bicycle
+                                img(src=item.src, alt=item.alt)
+                        else 
+                            .images.bottom-card-img
+                                img(src=item.src, alt=item.alt)
                 else
                     .images
                         img(src=item.src, alt=item.alt)
