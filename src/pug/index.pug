@@ -19,7 +19,7 @@ html(lang="en")
             .wrapper
                 .header-top
                     a(href="#")
-                        img(src="../img/logo.png", alt="logo")
+                        img(src="img/logo.png", alt="logo")
                     ul.top-menu
                         li 
                             a(href="#").header-a ГОЛОВНА
@@ -42,11 +42,11 @@ html(lang="en")
                 .header-bottom
                     h2.h2 ОБЕРИ СВІЙ ПЛАН ПОДОРОЖІ
                     p.text2 Наша фірма - лідер на ринку у своїй сфері
-                    a(href="#island")
-                        img(src="../img/arrow-down.png", alt="arrow").arrow-down
+                    a(href="#cards")
+                        img(src="img/arrow-down.png", alt="arrow").arrow-down
         main
             .wrapper
-                .main-top
+                .main-top#cards
                     .row
                         .info-left.col-3
                             h2.main-h2.h2 ПРО НАШУ КОМПАНІЮ
@@ -60,9 +60,9 @@ html(lang="en")
                                 +cards(cards.card3)
                             a(href="#").all-plans ДИВИТИСЬ УСІ ПЛАНИ    
                 .line
-                .island#island
+                .island
                     .island-left
-                        img(src="../img/island.png", alt="island").island-img
+                        img(src="img/island.png", alt="island").island-img
                     .island-right
                         h2.h2.island-h2 ДИВОВИЖНИЙ БЕЗЛЮДНИЙ ОСТРІВ, ЯКИЙ ЗВОДИТЬ ЛЮДЕЙ З РОЗУМУ
                         p.text2.island-text Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
@@ -97,7 +97,7 @@ html(lang="en")
                             +bottom_cards(bottom_cards.card2)
                             +bottom_cards(bottom_cards.card3)
                             +bottom_cards(bottom_cards.card4)
-                    .line 
+                    .line2
         footer
             .wrapper 
                 .footer 
