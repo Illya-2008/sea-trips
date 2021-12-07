@@ -91,10 +91,10 @@ mixin bottom_cards (item)
                 if (item.cardimg)
                     .images.bottom-card-img
                         if (item.bicycle)
-                            .images.bottom-card-img.bicycle
+                            .images.bicycle
                                 img(src=item.src, alt=item.alt)
                         else 
-                            .images.bottom-card-img
+                            .images
                                 img(src=item.src, alt=item.alt)
                 else
                     .images
